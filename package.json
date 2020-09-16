@@ -1,0 +1,56 @@
+{
+  "name": "typescript-ts-node-boilerplate",
+  "version": "0.0.1",
+  "description": "Typescript boilerplate for running with ts-node",
+  "keywords": [
+    "boilerplate",
+    "typescript",
+    "ts-node"
+  ],
+  "homepage": "https://github.com/emirayka/typescript-ts-node-boilerplate",
+  "bugs": {
+    "url": "https://github.com/emirayka/typescript-ts-node-boilerplate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emirayka/typescript-ts-node-boilerplate.git"
+  },
+  "license": "MIT",
+  "author": "emirayka emirayka@protonmail.com",
+  "main": "src/index.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint src/**/* --fix",
+    "prerelease": "npm run build",
+    "release": "npx standard-version",
+    "postrelease": "git push --follow-tags",
+    "start": "ts-node -r tsconfig-paths/register ./src/index.ts",
+    "pretest": "npm run lint",
+    "test": "jest",
+    "test:cov": "npm run test -- --coverage",
+    "test:watch": "npm run test -- --watch --notify",
+    "types:check": "tsc --noEmit",
+    "types:watch": "npm run types:check -- --watch",
+    "updates:check": "npx npm-check-updates",
+    "updates:update": "npx npm-check-updates -u"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.13",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
+    "eslint-plugin-jest": "^24.0.1",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.3.0",
+    "npm-check-updates": "^9.0.1",
+    "ts-jest": "^26.3.0"
+  },
+  "dependencies": {
+    "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.0.2"
+  }
+}

@@ -1,0 +1,1 @@
+export const GREETINGS_MESSAGE = 'That works'
